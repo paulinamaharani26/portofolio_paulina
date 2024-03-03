@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Paulina Maharani</title>
+		<link rel="stylesheet" href="dist/output.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Viga&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- swiper js -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+		/>
+		<!-- swiper js -->
+		<!-- AOS -->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<!-- End AOS -->
+		<!-- // On page load or when changing themes, best to add inline in `head` to avoid FOUC -->
+		<script>
+			if (
+				localStorage.theme === "dark" ||
+				(!("theme" in localStorage) &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches)
+			) {
+				document.documentElement.classList.add("dark");
+			} else {
+				document.documentElement.classList.remove("dark");
+			}
+		</script>
+	</head>
+	<body class="transition dark:bg-mydark">
+		<!-- animation bar scrolling progress -->
+		<div
+			class="progress-bar w-full h-[4px] rounded-xl bg-primary fixed top-0 left-0 animate-progress"
+		></div>
+		<!-- Loader animastion -->
+		<div
+			class="load-wrapper fixed z-[9999] flex h-[100vh] w-full flex-col flex-wrap items-center justify-center overflow-hidden bg-[#000000a1]"
+		>
+			<div
+				class="spinner absolute mx-auto my-[100px] -mt-0 flex h-[70px] w-[100px] select-none flex-col items-center justify-center text-center text-[10px]"
+			>
+				<span class="brand animate-pulse text-2xl text-white transition">
+					Paulina<span class="select-none font-semibold text-primary"
+						>Maharani</span
+					>
+				</span>
+				<div class="mx-auto h-full w-full">
+					<div class="rec1"></div>
+					<div class="rec2"></div>
+					<div class="rec3"></div>
+					<div class="rec4"></div>
+					<div class="rec5"></div>
+				</div>
+			</div>
+		</div>
+		<!-- end Loader animastion -->
+		<!-- Back to top -->
+		<a
+			href="#"
+			class="scrollup fixed bottom-0 right-0 z-[99] m-5 scale-0 rounded-full bg-primary px-3 py-2 text-2xl shadow-md transition"
+			><div class="text-white hover:animate-scrollup">
+				<i class="fas fa-rocket translate-y-[2px] -rotate-45"></i></div
+		></a>
+		<!-- End Back to top -->
+
+		<!-- Header -->
+		<!-- Menu nav on small devices -->
+		<div
+			id="nav-menu"
+			class="fixed right-[0px] top-20 z-[999] w-full max-w-[250px] translate-x-[270px] rounded-lg bg-white py-5 shadow-lg transition ease-in-out dark:bg-mydark lg:static lg:hidden lg:max-w-full lg:translate-x-[-0px] lg:rounded-none lg:bg-transparent lg:shadow-none"
+		>
+			<ul class="block lg:flex">
+				<li class="group">
+					<a
+						href="#home"
+						class="mx-8 flex py-2 text-base text-mydark group-hover:text-primary dark:text-white"
+						>Beranda</a
+					>
+				</li>
+				<li class="group">
+					<a
+						href="#about"
+						class="mx-8 flex py-2 text-base text-mydark group-hover:text-primary dark:text-white"
+						>Tentang saya</a
+					>
+				</li>
+				<li class="group">
+					<a
+						href="#portfolio"
+						class="mx-8 flex py-2 text-base text-mydark group-hover:text-primary dark:text-white"
+						>Portfolio</a
+					>
+				</li>
+				<li class="group">
+					<a
+						href="#contact"
+						class="mx-8 flex py-2 text-base text-mydark group-hover:text-primary dark:text-white"
+						>Kontak</a
+					>
+				</li>
+			</ul>
+		</div>
+		<!-- Menu nav on small devices end-->
+		<header
+			class="absolute left-0 top-0 z-40 flex h-[100px] w-full items-center transition-all ease-linear lg:px-36"
+		>
+			<div class="container">
+				<div class="relative flex items-center justify-between">
+					<div
+						class="flex px-3 text-2xl font-bold"
+						data-aos="fade-down"
+						data-aos-delay="2500"
+					>
+						<a href="#" class="brand transition dark:text-white"
+							>Paulina<span class="text-primary">Maharani</span></a
+						>
+					</div>
+					<div
+						class="flex items-center px-4"
+						data-aos="fade-up"
+						data-aos-delay="2500"
+					>
+						<div class="relative flex items-center gap-5">
+							<!-- Darkmode -->
+							<div
+								id="dark-mode-small"
+								class="relative ml-8 flex h-7 w-7 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-slate-100 p-2 lg:invisible"
+							>
+								<input
+									type="checkbox"
+									id="input-dark-small"
+									class="absolute left-1 top-1 z-10 h-5 w-5 cursor-pointer opacity-0"
+								/>
+								<div
+									id="dark-icon"
+									class="absolute flex translate-y-[14px] flex-col transition ease-linear"
+								>
+									<span class="light text-lg text-primary">
+										<i class="fas fa-sun"></i>
+									</span>
+									<span class="light text-lg text-primary"
+										><i class="fas fa-moon"></i>
+									</span>
+								</div>
+							</div>
+							<!-- End Darkmode -->
+							<button
+								id="hamburger"
+								name="hamburger"
+								type="button"
+								class="right-4 block lg:hidden"
+							>
+								<span
+									class="hamburger-line origin-top-left transition ease-in-out"
+								></span>
+								<span class="hamburger-line transition ease-in-out"></span>
+								<span
+									class="hamburger-line origin-bottom-left transition ease-in-out"
+								></span>
+							</button>
+						</div>
+						<nav
+							id="nav-menu"
+							class="absolute right-[0px] top-full z-[999] hidden w-full max-w-[250px] rounded-lg py-5 shadow-lg transition ease-in-out lg:static lg:flex lg:max-w-full lg:translate-x-[-0px] lg:rounded-none lg:bg-transparent lg:shadow-none"
+						>
+							<ul class="block lg:flex">
+								<li class="group">
+									<a
+										href="#home"
+										class="mx-8 flex py-2 text-base text-mydark group-hover:text-primary dark:text-white"
+										>Beranda</a
+									>
+								</li>
+								<li class="group">
+									<a
+										href="#about"
+										class="mx-8 flex py-2 text-base text-mydark group-hover:text-primary dark:text-white"
+										>Tentang saya</a
+									>
+								</li>
+								<li class="group">
+									<a
+										href="#portfolio"
+										class="mx-8 flex py-2 text-base text-mydark group-hover:text-primary dark:text-white"
+										>Portfolio</a
+									>
+								</li>
+								<li class="group">
+									<a
+										href="#contact"
+										class="mx-8 flex py-2 text-base text-mydark group-hover:text-primary dark:text-white"
+										>Kontak</a
+									>
+								</li>
+
+								<li class="flex items-center">
+									<!-- Darkmode -->
+									<div
+										id="dark-mode"
+										class="relative ml-8 flex h-7 w-7 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-slate-100 p-2"
+									>
+										<input
+											type="checkbox"
+											id="input-dark"
+											class="absolute left-1 top-1 z-10 h-5 w-5 cursor-pointer opacity-0"
+										/>
+										<div
+											id="dark-icon"
+											class="absolute flex translate-y-[14px] flex-col transition ease-linear"
+										>
+											<span class="light text-lg text-primary">
+												<i class="fas fa-sun"></i>
+											</span>
+											<span class="light text-lg text-primary"
+												><i class="fas fa-moon"></i>
+											</span>
+										</div>
+									</div>
+									<!-- End Darkmode -->
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header end-->
+
+		<!-- Hero  -->
+		<section
+			id="home"
+			class="hero lg:pt-40 pt-28 transition dark:bg-mydark lg:h-[100vh]"
+		>
+			<div class="container">
+				<div class="flex flex-wrap">
+					<div
+						class="w-full self-center px-4 lg:mt-8 lg:w-1/2 lg:pl-[150px]"
+						data-aos="fade-right"
+						data-aos-delay="2700"
+					>
+						<div class="inline-block text-center md:text-start lg:-mb-5">
+							<h1
+								class="text-base font-semibold text-mydark dark:text-white md:text-xl lg:mb-1 lg:text-2xl"
+							>
+								Hallo Semua, saya
+							</h1>
+							<div class="nama-wrap relative mb-5 lg:mb-3">
+								<h1
+									class="mt-1 block text-5xl font-bold text-primary lg:text-5xl"
+								>
+									Paulina Maharani
+								</h1>
+							</div>
+							<h2
+								class="mt-1 inline-block text-lg font-medium text-slate-600 dark:text-slate-300 lg:mb-8 lg:mt-0"
+							>
+								GRAPHIC DESIGNER
+								<span class="text-mydark dark:text-white"></span>
+								<br class="hidden md:block" />
+							</h2>
+						</div>
+						<div
+							class="lg:w-auto w-max skills mx-auto my-5 flex items-center lg:pl-0 pl-3 justify-center md:items-start md:justify-start"
+						>
+							<!-- Instagram -->
+							<a
+								href="https://www.instagram.com/plnmhrn"
+								target="_blank"
+								class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 text-slate-500 transition ease-in-out hover:border-primary hover:bg-primary hover:text-white dark:text-white"
+							>
+								<svg
+									class="fill-current"
+									width="20"
+									role="img"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<title>Instagram</title>
+									<path
+										d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+									/>
+								</svg>
+							</a>
+							<!-- Github -->
+							<a
+								href="https://github.com/paulinamaharani26"
+								target="_blank"
+								class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 text-slate-500 transition ease-in-out hover:border-primary hover:bg-primary hover:text-white dark:text-white"
+							>
+								<svg
+									class="fill-current"
+									width="20"
+									role="img"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<title>GitHub</title>
+									<path
+										d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+									/>
+								</svg>
+							</a>
+						</div>
+
+						<div class="flex w-full items-center justify-center md:block">
+							<a
+								href="#contact"
+								class="btn-shadow inline-flex px-8 py-3 text-base font-semibold text-primary transition duration-300 ease-in-out lg:mt-1"
+								>Contact Me</a
+							>
+						</div>
+					</div>
+					<div
+						class="hero-image-wrap relative mx-auto mt-14 h-[220px] w-[220px] md:mx-0 md:mt-7 md:h-[270px] md:w-[270px] lg:right-[-160px] lg:top-6"
+						data-aos="fade-down"
+						data-aos-delay="2500"
+					>
+						<div
+							class="hero-image absolute z-20 h-full w-full overflow-hidden bg-white"
+						>
+							<img
+								src="dist/img/pau.png"
+								alt=""
+								id="hero-img"
+								class="top-0 z-30 mx-auto max-w-full"
+								data-aos="fade-up"
+								data-aos-delay="2700"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Hero End  -->
+
+		<!-- About -->
+		<section
+			id="about"
+			class="md:sm-20 pb-32 pt-20 transition dark:bg-mydark lg:mt-0 lg:pt-36"
+		>
+			<div class="container">
+				<div class="flex flex-wrap">
+					<div
+						class="mb-10 w-full px-4 lg:w-1/2 lg:pl-[150px]"
+						data-aos="fade-down"
+						data-aos-delay="100"
+						data-aos-duration="1500"
+					>
+						<h4 class="mb-3 text-lg font-bold uppercase text-primary">
+							Tentang Saya
+						</h4>
+						<h2
+							class="mb-3 max-w-md text-3xl font-bold text-mydark dark:text-white lg:text-4xl"
+						>
+							Yuk, Kenali diri <span class="">Saya</span>!
+						</h2>
+						<p
+							class="max-w-xl text-base text-slate-700 dark:text-slate-300 lg:text-lg"
+						>
+							Hello, Nama saya Paulina Maharani, Usia saya saat 18 tahun, saya
+							berdomisili di cakung jakarta timur. Saya seorang siswi lulusan
+							SMKN 69 JAKARTA, jurusan Sistem Informasi Jaringan Dan Aplikasi,
+							yang mempunyai minat pada Design Grafis.
+							<br /><br />
+							Saya senang mempelajari hal hal baru dalam berbagai bidang di
+							SIJA. dan saya ingin mencari tantangan baru yang dapat lebih
+							mengasah kemampuan saya.
+						</p>
+
+						<button
+							onclick="refreshPage()"
+							id="btn-cv"
+							class="btn-shadow mt-5 px-5 py-2 text-base font-semibold text-primary transition duration-300 ease-in-out"
+						>
+							<a href="https://drive.google.com/drive/folders/1fUd9A5lDB_xKSa5poHEC9sbGQ7wbPSe8">DOWNLOAD CV & SERTIFIKAT</a>
+						</button>
+
+					</div>
+					<div
+						class="mx-auto flex w-full flex-col items-center justify-center px-4 lg:w-1/2"
+						data-aos="fade-down"
+						data-aos-delay="100"
+						data-aos-duration="1500"
+					>
+						<div class="">
+							<h3
+								class="mb-3 mt-10 text-center text-2xl font-semibold text-mydark dark:text-white md:mt-0 md:text-left lg:pt-12 lg:text-3xl"
+							>
+							</h3>
+							
+						</div>
+						<div class="Tentang">
+							<img
+								src="dist/img/ppau.jpg"
+								alt=""
+								data-aos="fade-up"
+								data-aos-delay="200"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- About end-->
+
+		<!-- Portofolio -->
+		<section
+			id="portfolio"
+			class="portofolio h-auto bg-slate-100 bg-fixed py-24 pt-10 dark:bg-[#343a40] md:pb-20 md:pt-20"
+		>
+			<div class="w-full px-4" data-aos="fade-down" data-aos-duration="1000">
+				<div class="container">
+					<div class="mx-auto mb-16 max-w-xl text-center">
+						<h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
+						<h2
+							class="mb-4 text-3xl font-bold text-white dark:text-white sm:text-4xl lg:text-5xl"
+						>
+							Project terbaru
+						</h2>
+					</div>
+				</div>
+				<div class="-m-5 mx-auto justify-center xl:mx-auto">
+					<div class="slider-large-device hidden md:flex">
+						<!-- swiper js -->
+						<!-- Slider main container -->
+						<div class="swiper slider-large-device h-auto md:w-9/12">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper flex w-full flex-nowrap pb-10">
+								<!-- Slides -->
+								<!-- large divace -->
+								<div
+									class="swiper-slide"
+									data-aos="zoom-in"
+									data-aos-duration="1000"
+									data-aos-delay="100"
+								>
+									<div class="card relative w-full bg-white dark:bg-secDark">
+										<div class="overflow-hidden shadow-md">
+											<img
+												src="dist/img/pr1.jpeg"
+												alt="Desain UI/UX"
+												class="w-full"
+											/>
+										</div>
+										<div class="dec">
+											<h3
+												class="mb-3 mt-5 font-semibold text-mydark dark:text-white"
+											>
+												Desain UI/UX untuk tugas web
+											</h3>
+											<div
+												class="tech ml-3 flex gap-3 text-2xl text-slate-600 dark:text-slate-300"
+											>
+											
+											</div>
+										</div>
+
+										<div class="bazar">
+											<div
+												class="github-bg-hov absolute bottom-0 right-0 z-20 h-5 w-5 rounded-full bg-primary"
+											></div>
+											<div
+												class="github absolute bottom-0 right-0 z-30 rounded-tl-[0px] bg-primary p-3"
+											>
+											</div>
+
+											<div
+												class="dec-hover absolute left-0 right-0 top-28 z-50 mx-auto flex w-8/12 translate-y-[270px] flex-col items-center justify-center rounded-lg bg-white p-5 text-center transition-all dark:bg-secDark"
+											>
+												<p class="detail text-sm dark:text-white">
+													Lorem ipsum dolor sit amet consectetur adipisicing
+													elit. Itaque, voluptas?
+												</p>
+												<a href="#" class="mt-4 w-max"
+													><span>
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															height="1em"
+															viewBox="0 0 512 512"
+															class="bg-white dark:p-1"
+														>
+															<path
+																d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+															/>
+														</svg> </span
+												></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div
+									class="swiper-slide"
+									data-aos="zoom-in"
+									data-aos-duration="1000"
+									data-aos-delay="100"
+								>
+									<div class="card relative w-full bg-white dark:bg-secDark">
+										<div class="overflow-hidden shadow-md">
+											<img
+												src="dist/img/pr2.jpeg"
+												alt="Desain UI/UX bersama kelompok"
+												class="w-full"
+											/>
+										</div>
+										<div class="dec">
+											<h3
+												class="mb-3 mt-5 font-semibold text-mydark dark:text-white"
+											>
+												Desain UI/UX bersama kelompok
+											</h3>
+											<div
+												class="tech ml-3 flex gap-3 text-2xl text-slate-600 dark:text-slate-300"
+											>
+											
+											</div>
+										</div>
+
+										<div class="agency">
+											<div
+												class="github-bg-hov absolute bottom-0 right-0 z-20 h-5 w-5 rounded-full bg-primary"
+											></div>
+											<div
+												class="github absolute bottom-0 right-0 z-30 rounded-tl-[0px] bg-primary p-3"
+											>
+											</div>
+
+											<div
+												class="dec-hover absolute left-0 right-0 top-28 z-50 mx-auto flex w-8/12 translate-y-[270px] flex-col items-center justify-center rounded-lg bg-white p-5 text-center transition-all dark:bg-secDark"
+											>
+												<p class="detail text-sm dark:text-white">
+													Lorem ipsum dolor sit amet consectetur adipisicing
+													elit. Itaque, voluptas?
+												</p>
+												<a href="#" class="mt-4 w-max"
+													><span>
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															height="1em"
+															viewBox="0 0 512 512"
+															class="bg-white dark:p-1"
+														>
+															<path
+																d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+															/>
+														</svg> </span
+												></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div
+									class="swiper-slide"
+									data-aos="zoom-in"
+									data-aos-duration="1000"
+									data-aos-delay="1000"
+								>
+									<div class="card relative w-full bg-white dark:bg-secDark">
+										<div class="overflow-hidden shadow-md">
+											<img
+												src="dist/img/pr3.jpeg"
+												alt="Desain UI/UX brand penyiram tanaman otomatis"
+												class="w-full"
+											/>
+										</div>
+										<div class="dec">
+											<h3
+												class="mb-3 mt-5 font-semibold text-mydark dark:text-white"
+											>
+												Desain UI/UX brand penyiram tanaman otomatis
+											</h3>
+											<div
+												class="tech ml-3 flex items-center gap-3 text-2xl text-slate-600 dark:text-slate-300"
+											>
+												
+											</div>
+										</div>
+
+										<div class="Desain UI/UX brand penyiram tanaman otomatis">
+											<div
+												class="github-bg-hov absolute bottom-0 right-0 z-20 h-5 w-5 rounded-full bg-primary"
+											></div>
+											<div
+												class="github absolute bottom-0 right-0 z-30 rounded-tl-[0px] bg-primary p-3"
+											>
+											</div>
+
+											<div
+												class="dec-hover absolute left-0 right-0 top-28 z-50 mx-auto flex w-8/12 translate-y-[270px] flex-col items-center justify-center rounded-lg bg-white p-5 text-center transition-all dark:bg-secDark"
+											>
+												<p class="detail text-sm dark:text-white">
+													Lorem ipsum dolor sit amet consectetur adipisicing
+													elit. Itaque, voluptas?
+												</p>
+												<a href="#" class="mt-4 w-max"
+													><span>
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															height="1em"
+															viewBox="0 0 512 512"
+															class="bg-white dark:p-1"
+														>
+															<path
+																d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+															/>
+														</svg> </span
+												></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div
+									class="swiper-slide"
+									data-aos="zoom-in"
+									data-aos-duration="1000"
+									data-aos-delay="1600"
+								>
+									<div class="card relative w-full bg-white dark:bg-secDark">
+										<div class="overflow-hidden shadow-md">
+											<img
+												src="dist/img/aiu.jpg"
+												alt="Peserta Bootcamp Pelatihan proogaming"
+												class="w-full"
+											/>
+										</div>
+										<div class="dec">
+											<h3
+												class="mb-3 mt-5 font-semibold text-mydark dark:text-white"
+											>
+												Peserta Bootcamp pelatihan proogaming
+											</h3>
+											<div
+												class="tech ml-3 flex items-center gap-3 text-2xl text-slate-600 dark:text-slate-300"
+											>
+											
+											</div>
+										</div>
+
+										<div class="Peserta Bootcamp Pelatihan proogaming">
+											<div
+												class="github-bg-hov absolute bottom-0 right-0 z-20 h-5 w-5 rounded-full bg-primary"
+											></div>
+											<div
+												class="github absolute bottom-0 right-0 z-30 rounded-tl-[0px] bg-primary p-3"
+											>
+												
+											</div>
+
+											<div
+												class="dec-hover absolute left-0 right-0 top-28 z-50 mx-auto flex w-8/12 translate-y-[270px] flex-col items-center justify-center rounded-lg bg-white p-5 text-center transition-all dark:bg-secDark"
+											>
+												<p class="detail text-sm dark:text-white">
+													Lorem ipsum dolor sit amet consectetur adipisicing
+													elit. Itaque, voluptas?
+												</p>
+												<a href="#" class="mt-4 w-max"
+													><span>
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															height="1em"
+															viewBox="0 0 512 512"
+															class="bg-white dark:p-1"
+														>
+															<path
+																d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+															/>
+														</svg> </span
+												></a>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- If we need pagination -->
+							<div class="swiper-pagination hidden"></div>
+							<!-- If we need scrollbar -->
+						</div>
+						<div class="pagination">
+							<!-- If we need navigation buttons -->
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+						<!--end swiper js -->
+					</div>
+
+					<div class="slider-phone-device md:hidden">
+						<!-- swiper js -->
+						<!-- Slider main container -->
+						<div class="swiper slider-phone-device h-auto w-10/12">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper flex w-full flex-nowrap">
+								<!-- Slides -->
+								<!-- large divace -->
+								<div
+									class="swiper-slide"
+									data-aos="zoom-in"
+									data-aos-duration="1000"
+									data-aos-delay="100"
+								>
+									<div class="card relative w-full bg-white dark:bg-[#343a40]">
+										<div class="overflow-hidden shadow-md">
+											<img
+												src="dist/img/pr1.jpeg"
+												alt="Desain UI/UX untuk tugas web"
+												class="w-full"
+											/>
+										</div>
+											<h3
+												class="mb-3 mt-5 font-semibold text-mydark dark:text-white"
+											>
+												Desain UI/UX untuk tugas Web
+											</h3>
+											<div
+												class="tech text-2xl text-slate-600 dark:text-slate-300"
+											>
+											</div>
+										</div>
+
+										<div class="bazar-phone">
+											<div
+												class="github-bg-hov absolute bottom-0 right-0 z-20 h-5 w-5 rounded-full bg-primary"
+											></div>
+											<div
+												class="github absolute bottom-0 right-0 z-30 rounded-tl-[0px] bg-primary p-2"
+											>
+										
+											</div>
+
+											<div
+												class="dec-hover absolute left-0 right-0 top-16 z-50 mx-auto flex w-8/12 translate-y-[230px] flex-col items-center justify-center rounded-lg bg-white p-5 text-center transition-all dark:bg-[#343a40]"
+											>
+												<p class="detail text-sm dark:text-white">
+													Lorem ipsum dolor sit amet consectetur adipisicing
+													elit. Itaque, voluptas?
+												</p>
+												<a href="#" class="mt-4 w-max"
+													><span>
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															height="1em"
+															viewBox="0 0 512 512"
+															class="dark:bg-white dark:p-1 lg:p-0"
+														>
+															<path
+																d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+															/>
+														</svg> </span
+												></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div
+									class="swiper-slide"
+									data-aos="zoom-in"
+									data-aos-duration="1000"
+									data-aos-delay="600"
+								>
+									<div class="card relative w-full bg-white dark:bg-secDark">
+										<div class="overflow-hidden shadow-md">
+											<img
+												src="dist/img/pr3.jpeg"
+												alt="stmik agency"
+												class="w-full"
+											/>
+										</div>
+										<div class="dec">
+											<h3
+												class="mb-3 mt-5 font-semibold text-mydark dark:text-white"
+											>
+												Desain UI/UX bersama kelompok
+											</h3>
+											<div
+												class="tech text-2xl text-slate-600 dark:text-slate-300"
+											>
+												<span
+													><i class="fab fa-laravel text-orange-600"></i
+												></span>
+												<span
+													><i class="fab fa-bootstrap text-purple-500"></i
+												></span>
+											</div>
+										</div>
+
+										<div class="agency-phone">
+											<div
+												class="github-bg-hov absolute bottom-0 right-0 z-20 h-5 w-5 rounded-full bg-primary"
+											></div>
+											<div
+												class="github absolute bottom-0 right-0 z-30 rounded-tl-[0px] bg-primary p-2"
+											>
+												
+											</div>
+
+											<div
+												class="dec-hover absolute left-0 right-0 top-16 z-50 mx-auto flex w-8/12 translate-y-[230px] flex-col items-center justify-center rounded-lg bg-white p-5 text-center transition-all dark:bg-secDark"
+											>
+												<p class="detail text-sm dark:text-white">
+													Lorem ipsum dolor sit amet consectetur adipisicing
+													elit. Itaque, voluptas?
+												</p>
+												<a href="#" class="mt-4 w-max"
+													><span>
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															height="1em"
+															viewBox="0 0 512 512"
+															class="dark:bg-white dark:p-1 lg:p-0"
+														>
+															<path
+																d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+															/>
+														</svg> </span
+												></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div
+									class="swiper-slide"
+									data-aos="zoom-in"
+									data-aos-duration="1000"
+									data-aos-delay="1000"
+								>
+									<div class="card relative w-full bg-white dark:bg-secDark">
+										<div class="overflow-hidden shadow-md">
+											<img
+												src="dist/img/pr3.jpeg"
+												alt="Desain UI/UX brand penyiram tanaman otomatis"
+												class="w-full"
+											/>
+										</div>
+										<div class="dec">
+											<h3
+												class="mb-3 mt-5 font-semibold text-mydark dark:text-white"
+											>
+												Desain UI/UX brand penyiram tanaman otomatis
+											</h3>
+											<div
+												class="tech flex items-center gap-2 text-2xl text-slate-600 dark:text-slate-300"
+											>
+												<span><i class="fab fa-react text-blue-400"></i></span>
+												<span class="text-blue-500"
+													><svg
+														xmlns="http://www.w3.org/2000/svg"
+														class="fill-current"
+														width="26"
+														viewBox="0 0 20 14"
+													>
+														<title>Tailwind</title>
+														<path
+															d="M9.782.72a4.773 4.773 0 0 0-4.8 4.173 3.43 3.43 0 0 1 2.741-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.934-2.865 3.137-3.921-.969 1.379-2.44 2.207-4.259 1.231C14.488 3.365 13.551.6 9.782.72ZM4.8 6.979A4.772 4.772 0 0 0 0 11.151a3.43 3.43 0 0 1 2.745-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.933-2.865 3.137-3.921-.97 1.379-2.44 2.208-4.259 1.231C9.51 9.623 8.573 6.853 4.8 6.979Z"
+														/>
+													</svg>
+												</span>
+											</div>
+										</div>
+										<div class="Desain UI/UX Brand penyiram tanaman otomatis">
+											<div
+												class="github-bg-hov absolute bottom-0 right-0 z-20 h-5 w-5 rounded-full bg-primary"
+											></div>
+											<div
+												class="github absolute bottom-0 right-0 z-30 rounded-tl-[0px] bg-primary p-2"
+											>
+												
+											</div>
+
+											<div
+												class="dec-hover absolute left-0 right-0 top-16 z-50 mx-auto flex w-8/12 translate-y-[230px] flex-col items-center justify-center rounded-lg bg-white p-5 text-center transition-all dark:bg-secDark"
+											>
+												<p class="detail text-sm dark:text-white">
+													Lorem ipsum dolor sit amet consectetur adipisicing
+													elit. Itaque, voluptas?
+												</p>
+												<a href="#" class="mt-4 w-max"
+													><span>
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															height="1em"
+															viewBox="0 0 512 512"
+															class="dark:bg-white dark:p-1 lg:p-0"
+														>
+															<path
+																d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+															/>
+														</svg> </span
+												></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div
+									class="swiper-slide"
+									data-aos="zoom-in"
+									data-aos-duration="1000"
+									data-aos-delay="1600"
+								>
+									<div class="card relative w-full bg-white dark:bg-secDark">
+										<div class="overflow-hidden shadow-md">
+											<img
+												src="dist/img/aiu.jpg"
+												alt="Peserta Bootcamp Pelatihan proogaming"
+												class="w-full"
+											/>
+										</div>
+										<div class="dec">
+											<h3
+												class="mb-3 mt-5 font-semibold text-mydark dark:text-white"
+											>
+												Peserta Bootcamp pelatihan proogaming
+											</h3>
+											<div
+												class="tech flex items-center gap-2 text-2xl text-slate-600 dark:text-slate-300"
+											>
+												<span class="text-blue-500"
+													><svg
+														xmlns="http://www.w3.org/2000/svg"
+														class="fill-current"
+														width="26"
+														viewBox="0 0 20 14"
+													>
+														<title>Tailwind</title>
+														<path
+															d="M9.782.72a4.773 4.773 0 0 0-4.8 4.173 3.43 3.43 0 0 1 2.741-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.934-2.865 3.137-3.921-.969 1.379-2.44 2.207-4.259 1.231C14.488 3.365 13.551.6 9.782.72ZM4.8 6.979A4.772 4.772 0 0 0 0 11.151a3.43 3.43 0 0 1 2.745-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.933-2.865 3.137-3.921-.97 1.379-2.44 2.208-4.259 1.231C9.51 9.623 8.573 6.853 4.8 6.979Z"
+														/>
+													</svg>
+												</span>
+												<span><i class="fab fa-js text-yellow-400"></i></span>
+											</div>
+										</div>
+										<div class="aclhutz-phone">
+											<div
+												class="github-bg-hov absolute bottom-0 right-0 z-20 h-5 w-5 rounded-full bg-primary"
+											></div>
+											<div
+												class="github absolute bottom-0 right-0 z-30 rounded-tl-[0px] bg-primary p-2"
+											>
+												
+											</div>
+
+											<div
+												class="dec-hover absolute left-0 right-0 top-16 z-50 mx-auto flex w-8/12 translate-y-[230px] flex-col items-center justify-center rounded-lg bg-white p-5 text-center transition-all dark:bg-secDark"
+											>
+												<p class="detail text-sm dark:text-white">
+													Lorem ipsum dolor sit amet consectetur adipisicing
+													elit. Itaque, voluptas?
+												</p>
+												<a href="#" class="mt-4 w-max"
+													><span>
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															height="1em"
+															viewBox="0 0 512 512"
+															class="dark:bg-white dark:p-1 lg:p-0"
+														>
+															<path
+																d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+															/>
+														</svg> </span
+												></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+				
+
+							<!-- If we need scrollbar -->
+							<div class="swiper-scrollbar hidden"></div>
+						</div>
+						<div class="pagination-phone">
+							<!-- If we need pagination -->
+
+							<!-- If we need navigation buttons -->
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+						<!--end swiper js -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Portofolio end-->
+
+		<!-- Contact -->
+		<section id="contact" class="pb-32 pt-36 transition dark:bg-[#343a40]">
+			<div class="container">
+				<div
+					class="w-full px-4"
+					data-aos="fade-down"
+					data-aos-duration="1000"
+					data-aos-delay="100"
+				>
+					<div class="mx-auto mb-16 max-w-xl text-center">
+						<h4 class="mb-2 text-lg font-semibold text-primary">Contact</h4>
+						<h2
+							class="mb-4 text-3xl font-bold text-mydark dark:text-white sm:text-4xl lg:text-5xl"
+						>
+							Hubungi Saya
+						</h2>
+					</div>
+				</div>
+
+				<form action="">
+					<div class="mx-auto w-full md:w-1/2">
+						<div
+							class="mb-8 w-full px-4"
+							data-aos="fade-down"
+							data-aos-duration="1000"
+							data-aos-delay="150"
+						>
+							<label for="name" class="text-base font-bold text-primary"
+								>Nama</label
+							>
+							<input
+								type="text"
+								id="name"
+								class="mt-2 w-full rounded-md bg-slate-200 p-2 text-mydark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+							/>
+						</div>
+						<div
+							class="mb-6 w-full px-4"
+							data-aos="fade-down"
+							data-aos-duration="1000"
+							data-aos-delay="200"
+						>
+							<label for="email" class="text-base font-bold text-primary"
+								>Email</label
+							>
+							<input
+								type="email"
+								id="email"
+								class="peer mt-2 w-full rounded-md bg-slate-200 p-2 text-mydark invalid:text-red-500 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary invalid:focus:ring-red-500"
+							/>
+							<p
+								class="invisible m-1 text-sm text-red-500 peer-invalid:visible"
+							>
+								Email tidak valid.
+							</p>
+						</div>
+						<div
+							class="mb-8 w-full px-4"
+							data-aos="fade-down"
+							data-aos-duration="1000"
+							data-aos-delay="250"
+						>
+							<label for="pesan" class="text-base font-bold text-primary"
+								>Pesan</label
+							>
+							<textarea
+								type="text"
+								id="pesan"
+								class="mt-2 h-28 w-full rounded-md bg-slate-200 p-2 text-mydark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+							></textarea>
+						</div>
+						<div
+							class="w-full px-4"
+							data-aos="fade-up"
+							data-aos-duration="1000"
+							data-aos-delay="300"
+						>
+							<button
+								class="w-full rounded-full bg-primary px-6 py-2 text-base font-semibold uppercase text-white transition duration-300 hover:opacity-90 hover:shadow-lg"
+							>
+								Kirim <i class="fas fa-paper-plane"></i>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		<!-- Contact end-->
+
+		<!-- Footer -->
+		<section class="bg-mydark pb-12 pt-24">
+			<div class="container">
+				<div class="mx-auto flex flex-wrap justify-center md:w-10/12">
+					<div
+						class="mb-12 w-full px-4 text-slate-200 md:w-1/3"
+						data-aos="fade-down"
+						data-aos-duration="1000"
+						data-aos-delay="100"
+					>
+						<h2 class="mb-5 text-4xl font-bold text-primary">
+							Paulina Maharani
+						</h2>
+						<h3 class="mb-2 text-2xl font-bold">Hubungi Kami</h3>
+						<p>WA: 081511479323</p>
+						<p>plnmhrn@gmail.com</p>
+						<p>Jl. Tipar Cakung, Gang Toge, RT 5/RW 5, Cakung Barat</p>
+						<p>Kec. Cakung</p>
+					</div>
+					<div
+						class="mb-12 w-full px-4 md:w-1/3"
+						data-aos="fade-down"
+						data-aos-duration="1000"
+						data-aos-delay="150"
+					>
+						<h3 class="mb-5 text-xl font-semibold text-white">
+							Project Terbaru
+						</h3>
+						<ul>
+							<li>
+								<a
+									href="#portfolio"
+									class="mb-2 inline-block text-base text-slate-200 hover:text-primary"
+									>Desain UI/UX Es cream</a
+								>
+							</li>
+							<li>
+								<a
+									href="#portfolio"
+									class="mb-2 inline-block text-base text-slate-200 hover:text-primary"
+									>Desain UI/UX bersama kelompok</a
+								>
+							</li>
+							<li>
+								<a
+									href="#portfolio"
+									class="mb-2 inline-block text-base text-slate-200 hover:text-primary"
+									>Desain UI/UX brand penyiram tanaman otomatis</a
+								>
+							</li>
+              <li>
+                <a href="#portfolio"
+                class="mb-2 inline-block text-base text-slate-200 hover:text-primary"
+                >Peserta Bootcamp Pelatihan Proogaming  </a>
+              </li>
+						</ul>
+					</div>
+					<div
+						class="mb-12 w-full px-4 md:w-1/3"
+						data-aos="fade-down"
+						data-aos-duration="1000"
+						data-aos-delay="200"
+					>
+						<h3 class="mb-5 text-xl font-semibold text-white">Tautan</h3>
+						<ul>
+							<li>
+								<a
+									href="#home"
+									class="mb-2 inline-block text-base text-slate-200 hover:text-primary"
+									>Beranda</a
+								>
+							</li>
+							<li>
+								<a
+									href="#about"
+									class="mb-2 inline-block text-base text-slate-200 hover:text-primary"
+									>Tentang saya</a
+								>
+							</li>
+							<li>
+								<a
+									href="#portfolio"
+									class="mb-2 inline-block text-base text-slate-200 hover:text-primary"
+									>Portfolio</a
+								>
+							</li>
+							<li>
+								<a
+									href="#contact"
+									class="mb-2 inline-block text-base text-slate-200 hover:text-primary"
+									>Kontak</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="mb-8 w-full border-t border-slate-500 pt-10">
+					<div class="mb-5 flex items-center justify-center">
+						<!-- youtube -->
+
+						<!-- Instagram -->
+						<a
+							href="https://instagram.com/plnmhrn"
+							target="_blank"
+							class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 text-primary transition ease-in-out hover:border-primary hover:bg-primary hover:text-white"
+							data-aos="zoom-in"
+							data-aos-delay="100"
+						>
+							<svg
+								class="fill-current"
+								width="20"
+								role="img"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<title>Instagram</title>
+								<path
+									d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+								/>
+							</svg>
+						</a>
+
+						<!-- github -->
+						<a
+							href="https://github.com/paulinamaharani26"
+							target="_blank"
+							class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 text-primary transition ease-in-out hover:border-primary hover:bg-primary hover:text-white"
+							data-aos="zoom-in"
+							data-aos-delay="250"
+						>
+							<svg
+								class="fill-current"
+								width="20"
+								role="img"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<title>GitHub</title>
+								<path
+									d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+								/>
+							</svg>
+						</a>
+					</div>
+					<p class="text-center text-xs text-slate-300">
+						Copyright by &copy; 2022
+						<a
+							href="https://github.com/paulinamaharani26"
+							target="_blank"
+							class="font-bold text-primary"
+							>paulina maharani</a
+						>.
+					</p>
+				</div>
+			</div>
+		</section>
+		<!-- Footer end-->
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+		<script
+			src="https://kit.fontawesome.com/71bba478e7.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="dist/js/script.js"></script>
+	</body>
+</html>
